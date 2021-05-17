@@ -389,7 +389,7 @@ public interface Modem {
 그래야 쉽다.
 
 ### N4: 명확힌 이름
-함수나 변수의 목적을 명확히 밝히는 일므을 선택하자.
+함수나 변수의 목적을 명확히 밝히는 이름을 선택하자.
 길어도 괜찮다.
 
 ### N5: 긴 범위는 긴 이름을 사용하라
@@ -400,6 +400,7 @@ private void rollmany(int n, int pins) {
     }
 }
 ```
+-> i같은 생명주기가 짧은 변수는 작명이 짧아도 괜찮음. 하지만 함수끝까지 i같은 짧은 이름의 변수를 가져가지 말자
 
 ### N6: 인코딩을 피하라
 이름 유형 정보나 범위 정보를 넣어서는 안된다.
@@ -410,7 +411,7 @@ m_같은 접두어를 더이상 붙힐 필요가 없다.
 함수, 변수, 클래스가 하는 일을 모두 기술하는 이름을 사용한다. 이름에 부수 효과를 숨기지 않는다.
 ex)
 ```
-public ObjectOutputStream getOss() throws IOException {
+public ObjectOutputStream getOos() throws IOException {
     if (m_oos == null {
         m_oos = newObjectOutputStream(m_socket.getOutputStream());
     }
